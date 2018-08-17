@@ -8,7 +8,7 @@ filetype on
 
 set shortmess=atI " 启动不显示乌干达
 set ruler
-colorscheme murphy
+colorscheme torte
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -84,24 +84,36 @@ autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java,*.py exec ":call SetTitle()"
 ""定义函数SetTitle，自动插入文件头
 func SetTitle()
     "如果文件类型为.sh文件
-    if &filetype == 'sh' || &filetype == 'python'
-        call setline(1,"\#########################################################################")
-        
-        call append(line("."), "\# coding: utf-8")
-        call append(line(".")+1, "\# File Name: ".expand("%"))
-        call append(line(".")+2, "\# Author: buptxiaomiao")
-        call append(line(".")+3, "\# mail: buptwjh@outlook.com")
-        call append(line(".")+4, "\# Created Time: ".strftime("%c"))
-        call append(line(".")+5, "\#########################################################################")
-    endif
     if &filetype == 'sh'
-        call append(line(".")+5, "\#!/bin/bash")
-        call append(line(".")+6, "")
+        call setline(1,"\#########################################################################")
+        call append(line("."), "\#!/bin/bash")
+        call append(line(".")+1, "")
     endif
+
     if &filetype == 'python'
-        call append(line(".")+5, "\#!/usr/bin/python")
-        call append(line(".")+6, "")
+        call setline(1,"\#########################################################################")
+        call append(line("."), "\# coding: utf-8")
+        call append(line(".")+1, "\#!/usr/bin/python")
     endif
+
+    if &filetype == 'sh' || &filetype == 'python'
+        call append(line(".")+2, "\# File Name: ".expand("%"))
+        call append(line(".")+3, "\# Author: buptxiaomiao")
+        call append(line(".")+4, "\# mail: buptwjh@outlook.com")
+        call append(line(".")+5, "\# Created Time: ".strftime("%c"))
+        call append(line(".")+6, "\#########################################################################")
+    endif
+
+    if &filetype == 'java'
+        call setline(1, "/*------------------------------------------------------------------------")
+        call append(line("."), "-   File Name: ".expand("%"))
+        call append(line(".")+1, "-    Author: buptxiaomiao")
+        call append(line(".")+2, "-    Mail: buptwjh@outlook.com ")
+        call append(line(".")+3, "-    Created Time: ".strftime("%c"))
+        call append(line(".")+4, "------------------------------------------------------------------------*/")
+        call append(line(".")+5, "")
+    endif
+
         
     if &filetype == 'cpp' || &filetype == 'c'
         call setline(1, "/*************************************************************************")
@@ -125,6 +137,6 @@ func SetTitle()
     endif
 
     "新建文件后，自动定位到文件末尾
-    autocmd BufNewFile * normal G
+    autocmd BufNewFile * normal GG
 endfunc
 
