@@ -12,7 +12,7 @@ alias kaifa3.4='~/bin/kaifa3.4.sh'
 alias mq='~/bin/mq.sh'
 
 # config
-alias ll='ls -a -l -h'
+alias ll='ls -l -h'
 
 # quick cheet
 alias l_python='cd /Users/wjh/PycharmProjects/crack;'
