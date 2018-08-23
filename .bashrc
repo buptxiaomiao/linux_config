@@ -15,9 +15,9 @@ alias mq='~/bin/mq.sh'
 alias ll='ls -l -h'
 
 # quick cheet
-alias l_python='cd /Users/wjh/PycharmProjects/crack;'
-alias l_java='cd /Users/wjh/java_trick/learning;'
-alias source_python='source /Users/wjh/venv/bin/activate'
+alias l_python='cd ~/PycharmProjects/crack;'
+alias l_java='cd ~/java_trick/learning;'
+alias source_python='source ~/venv/bin/activate'
 alias config_tomcat='cd /Library/tomcat/;'
 alias tomcat_start='sh /Library/tomcat/bin/startup.sh;'
 alias tomcat_shutdown='sh /Library/tomcat/bin/shutdown.sh;'
