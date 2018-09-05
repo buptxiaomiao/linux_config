@@ -8,6 +8,8 @@ alias kaifa3.2='~/bin/kaifa3.2.sh'
 alias kaifa3.3='~/bin/kaifa3.3.sh'
 alias kaifa3.4='~/bin/kaifa3.4.sh'
 
+alias hd='~/bin/hd.sh'
+
 # application
 alias mq='~/bin/mq.sh'
 
@@ -15,9 +17,11 @@ alias mq='~/bin/mq.sh'
 alias ll='ls -l -h'
 
 # quick cheet
-alias l_python='cd ~/PycharmProjects/crack;'
+alias l_python='cd ~/python_trick;'
 alias l_java='cd ~/java_trick/learning;'
-alias source_python='source ~/venv/bin/activate'
+alias source_python='source ~/venv/venvpy3/bin/activate'
+alias source_python2='source ~/venv/venvpy2/bin/activate'
+alias source_python3='source ~/venv/venvpy3/bin/activate'
 alias config_tomcat='cd /Library/tomcat/;'
 alias tomcat_start='sh /Library/tomcat/bin/startup.sh;'
 alias tomcat_shutdown='sh /Library/tomcat/bin/shutdown.sh;'
