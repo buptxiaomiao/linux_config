@@ -10,8 +10,12 @@ alias kaifa3.4='~/bin/kaifa3.4.sh'
 
 alias hd='~/bin/hd.sh'
 
-# application
-alias mq='~/bin/mq.sh'
+# mq
+alias mq='sh ~/bin/mq.sh'
+alias mq_stop='sh ~/bin/mq.sh stop'
+#redis
+alias redis='sh ~/bin/redis.sh'
+alias redis_stop='sh ~/bin/redis.sh stop'
 
 # config
 alias ll='ls -l -h'
