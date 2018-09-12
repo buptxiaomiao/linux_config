@@ -11,7 +11,8 @@ docker stop redis_6379
 docker rm redis_6379
 
 if [ "$1" != "stop" ]; then
-    docker run --name redis_6379 -p 6379:6379 -d redis
+    docker run -p 6379:6379 -v ~/data/redis/:/data/ --name redis_6379 -d redis
+    #docker run -p 6379:6379 --name redis_6379 -d redis
     echo "start docker redis——6379 finish..."
     docker ps
 else
